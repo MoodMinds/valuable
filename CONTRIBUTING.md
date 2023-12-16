@@ -1,6 +1,6 @@
 # Contribution Guidelines
 
-Thank you for your interest in contributing to Valuable!
+Thank you for your interest in contributing to **Valuable**!
 
 **Project Status: Experimental and Under Development**
 
