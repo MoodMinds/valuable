@@ -20,7 +20,7 @@ public interface Valuable<V> {
     void set(V val);
 
     /**
-     * Get the previous value possible atomically for threadsafe and set the new value.
+     * Get the previous value possible atomically for thread-safe and set the new value.
      *
      * @param val the new value to set
      * @return the previous value
@@ -28,7 +28,7 @@ public interface Valuable<V> {
     V get(V val);
 
     /**
-     * Set the given value possibly atomically for threadsafe if the current value {@code == state}.
+     * Set the given value possibly atomically for thread-safe if the current value {@code == state}.
      *
      * @param state the given expected current
      * @param val the given value
@@ -57,7 +57,7 @@ public interface Valuable<V> {
         void set(boolean flg);
 
         /**
-         * Get the previous value possible atomically for threadsafe and set the new value.
+         * Get the previous value possible atomically for thread-safe and set the new value.
          *
          * @param flg the new value to set
          * @return the previous value
@@ -65,7 +65,7 @@ public interface Valuable<V> {
         boolean get(boolean flg);
 
         /**
-         * Set the given value possibly atomically for threadsafe if the current value {@code == state}.
+         * Set the given value possibly atomically for thread-safe if the current value {@code == state}.
          *
          * @param state the given expected current
          * @param flg the given value
@@ -94,7 +94,7 @@ public interface Valuable<V> {
         void set(char chr);
 
         /**
-         * Get the previous value possible atomically for threadsafe and set the new value.
+         * Get the previous value possible atomically for thread-safe and set the new value.
          *
          * @param chr the new value to set
          * @return the previous value
@@ -102,7 +102,7 @@ public interface Valuable<V> {
         char get(char chr);
 
         /**
-         * Set the given value possibly atomically for threadsafe if the current value {@code == state}.
+         * Set the given value possibly atomically for thread-safe if the current value {@code == state}.
          *
          * @param state the given expected current
          * @param chr the given value
@@ -131,7 +131,7 @@ public interface Valuable<V> {
         void set(byte num);
 
         /**
-         * Get the previous value possible atomically for threadsafe and set the new value.
+         * Get the previous value possible atomically for thread-safe and set the new value.
          *
          * @param num the new value to set
          * @return the previous value
@@ -139,7 +139,7 @@ public interface Valuable<V> {
         byte get(byte num);
 
         /**
-         * Set the given value possibly atomically for threadsafe if the current value {@code == state}.
+         * Set the given value possibly atomically for thread-safe if the current value {@code == state}.
          *
          * @param state the given expected current
          * @param num the given value
@@ -148,14 +148,14 @@ public interface Valuable<V> {
         boolean set(byte state, byte num);
 
         /**
-         * Increment value possibly atomically for threadsafe and return.
+         * Increment value possibly atomically for thread-safe and return.
          *
          * @return incremented value
          */
         byte incr();
 
         /**
-         * Decrement value possibly atomically for threadsafe and return.
+         * Decrement value possibly atomically for thread-safe and return.
          *
          * @return decremented value
          */
@@ -182,7 +182,7 @@ public interface Valuable<V> {
         void set(short num);
 
         /**
-         * Get the previous value possible atomically for threadsafe and set the new value.
+         * Get the previous value possible atomically for thread-safe and set the new value.
          *
          * @param num the new value to set
          * @return the previous value
@@ -190,7 +190,7 @@ public interface Valuable<V> {
         short get(short num);
 
         /**
-         * Set the given value possibly atomically for threadsafe if the current value {@code == state}.
+         * Set the given value possibly atomically for thread-safe if the current value {@code == state}.
          *
          * @param state the given expected current
          * @param num the given value
@@ -199,14 +199,14 @@ public interface Valuable<V> {
         boolean set(short state, short num);
 
         /**
-         * Increment value possibly atomically for threadsafe and return.
+         * Increment value possibly atomically for thread-safe and return.
          *
          * @return incremented value
          */
         short incr();
 
         /**
-         * Decrement value possibly atomically for threadsafe and return.
+         * Decrement value possibly atomically for thread-safe and return.
          *
          * @return decremented value
          */
@@ -233,7 +233,7 @@ public interface Valuable<V> {
         void set(int num);
 
         /**
-         * Get the previous value possible atomically for threadsafe and set the new value.
+         * Get the previous value possible atomically for thread-safe and set the new value.
          *
          * @param num the new value to set
          * @return the previous value
@@ -241,7 +241,7 @@ public interface Valuable<V> {
         int get(int num);
 
         /**
-         * Set the given value possibly atomically for threadsafe if the current value {@code == state}.
+         * Set the given value possibly atomically for thread-safe if the current value {@code == state}.
          *
          * @param state the given expected current
          * @param num the given value
@@ -250,14 +250,14 @@ public interface Valuable<V> {
         boolean set(int state, int num);
 
         /**
-         * Increment value possibly atomically for threadsafe and return.
+         * Increment value possibly atomically for thread-safe and return.
          *
          * @return incremented value
          */
         int incr();
 
         /**
-         * Decrement value possibly atomically for threadsafe and return.
+         * Decrement value possibly atomically for thread-safe and return.
          *
          * @return decremented value
          */
@@ -284,7 +284,7 @@ public interface Valuable<V> {
         void set(long num);
 
         /**
-         * Get the previous value possible atomically for threadsafe and set the new value.
+         * Get the previous value possible atomically for thread-safe and set the new value.
          *
          * @param num the new value to set
          * @return the previous value
@@ -292,7 +292,7 @@ public interface Valuable<V> {
         long get(long num);
 
         /**
-         * Set the given value possibly atomically for threadsafe if the current value {@code == state}.
+         * Set the given value possibly atomically for thread-safe if the current value {@code == state}.
          *
          * @param state the given expected current
          * @param num the given value
@@ -301,14 +301,14 @@ public interface Valuable<V> {
         boolean set(long state, long num);
 
         /**
-         * Increment value possibly atomically for threadsafe and return.
+         * Increment value possibly atomically for thread-safe and return.
          *
          * @return incremented value
          */
         long incr();
 
         /**
-         * Decrement value possibly atomically for threadsafe and return.
+         * Decrement value possibly atomically for thread-safe and return.
          *
          * @return decremented value
          */
@@ -335,7 +335,7 @@ public interface Valuable<V> {
         void set(float num);
 
         /**
-         * Get the previous value possible atomically for threadsafe and set the new value.
+         * Get the previous value possible atomically for thread-safe and set the new value.
          *
          * @param num the new value to set
          * @return the previous value
@@ -343,7 +343,7 @@ public interface Valuable<V> {
         float get(float num);
 
         /**
-         * Set the given value possibly atomically for threadsafe if the current value {@code == state}.
+         * Set the given value possibly atomically for thread-safe if the current value {@code == state}.
          *
          * @param state the given expected current
          * @param num the given value
@@ -372,7 +372,7 @@ public interface Valuable<V> {
         void set(double num);
 
         /**
-         * Get the previous value possible atomically for threadsafe and set the new value.
+         * Get the previous value possible atomically for thread-safe and set the new value.
          *
          * @param num the new value to set
          * @return the previous value
@@ -380,7 +380,7 @@ public interface Valuable<V> {
         double get(double num);
 
         /**
-         * Set the given value possibly atomically for threadsafe if the current value {@code == state}.
+         * Set the given value possibly atomically for thread-safe if the current value {@code == state}.
          *
          * @param state the given expected current
          * @param num the given value
