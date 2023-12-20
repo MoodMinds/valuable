@@ -44,7 +44,7 @@ public class Variable<V> implements Valuable<V>, Serializable {
      * @param val {@inheritDoc}
      */
     @Override
-    public void set(V val) {
+    public void put(V val) {
         this.val = val;
     }
 
@@ -55,7 +55,7 @@ public class Variable<V> implements Valuable<V>, Serializable {
      * @return {@inheritDoc}
      */
     @Override
-    public V get(V val) {
+    public V set(V val) {
         V prev = this.val; this.val = val; return prev;
     }
 
@@ -67,7 +67,7 @@ public class Variable<V> implements Valuable<V>, Serializable {
      * @return {@inheritDoc}
      */
     @Override
-    public boolean set(V state, V val) {
+    public boolean let(V state, V val) {
         if (!Objects.equals(this.val, state))
             return false;
         this.val = val; return true;
@@ -109,7 +109,7 @@ public class Variable<V> implements Valuable<V>, Serializable {
          * @param flg {@inheritDoc}
          */
         @Override
-        public void set(boolean flg) {
+        public void put(boolean flg) {
             this.flg = flg;
         }
 
@@ -120,7 +120,7 @@ public class Variable<V> implements Valuable<V>, Serializable {
          * @return {@inheritDoc}
          */
         @Override
-        public boolean get(boolean flg) {
+        public boolean set(boolean flg) {
             boolean prev = this.flg; this.flg = flg; return prev;
         }
 
@@ -132,7 +132,7 @@ public class Variable<V> implements Valuable<V>, Serializable {
          * @return {@inheritDoc}
          */
         @Override
-        public boolean set(boolean state, boolean flg) {
+        public boolean let(boolean state, boolean flg) {
             if (this.flg != state)
                 return false;
             this.flg = flg; return true;
@@ -175,7 +175,7 @@ public class Variable<V> implements Valuable<V>, Serializable {
          * @param chr {@inheritDoc}
          */
         @Override
-        public void set(char chr) {
+        public void put(char chr) {
             this.chr = chr;
         }
 
@@ -186,7 +186,7 @@ public class Variable<V> implements Valuable<V>, Serializable {
          * @return {@inheritDoc}
          */
         @Override
-        public char get(char chr) {
+        public char set(char chr) {
             char prev = this.chr; this.chr = chr; return prev;
         }
 
@@ -198,7 +198,7 @@ public class Variable<V> implements Valuable<V>, Serializable {
          * @return {@inheritDoc}
          */
         @Override
-        public boolean set(char state, char chr) {
+        public boolean let(char state, char chr) {
             if (this.chr != state)
                 return false;
             this.chr = chr; return true;
@@ -241,7 +241,7 @@ public class Variable<V> implements Valuable<V>, Serializable {
          * @param num {@inheritDoc}
          */
         @Override
-        public void set(byte num) {
+        public void put(byte num) {
             this.num = num;
         }
 
@@ -252,7 +252,7 @@ public class Variable<V> implements Valuable<V>, Serializable {
          * @return {@inheritDoc}
          */
         @Override
-        public byte get(byte num) {
+        public byte set(byte num) {
             byte prev = this.num; this.num = num; return prev;
         }
 
@@ -264,7 +264,7 @@ public class Variable<V> implements Valuable<V>, Serializable {
          * @return {@inheritDoc}
          */
         @Override
-        public boolean set(byte state, byte num) {
+        public boolean let(byte state, byte num) {
             if (this.num != state)
                 return false;
             this.num = num; return true;
@@ -327,7 +327,7 @@ public class Variable<V> implements Valuable<V>, Serializable {
          * @param num {@inheritDoc}
          */
         @Override
-        public void set(short num) {
+        public void put(short num) {
             this.num = num;
         }
 
@@ -338,7 +338,7 @@ public class Variable<V> implements Valuable<V>, Serializable {
          * @return {@inheritDoc}
          */
         @Override
-        public short get(short num) {
+        public short set(short num) {
             short prev = this.num; this.num = num; return prev;
         }
 
@@ -350,7 +350,7 @@ public class Variable<V> implements Valuable<V>, Serializable {
          * @return {@inheritDoc}
          */
         @Override
-        public boolean set(short state, short num) {
+        public boolean let(short state, short num) {
             if (this.num != state)
                 return false;
             this.num = num; return true;
@@ -413,7 +413,7 @@ public class Variable<V> implements Valuable<V>, Serializable {
          * @param num {@inheritDoc}
          */
         @Override
-        public void set(int num) {
+        public void put(int num) {
             this.num = num;
         }
 
@@ -424,7 +424,7 @@ public class Variable<V> implements Valuable<V>, Serializable {
          * @return {@inheritDoc}
          */
         @Override
-        public int get(int num) {
+        public int set(int num) {
             int prev = this.num; this.num = num; return prev;
         }
 
@@ -436,7 +436,7 @@ public class Variable<V> implements Valuable<V>, Serializable {
          * @return {@inheritDoc}
          */
         @Override
-        public boolean set(int state, int num) {
+        public boolean let(int state, int num) {
             if (this.num != state)
                 return false;
             this.num = num; return true;
@@ -499,7 +499,7 @@ public class Variable<V> implements Valuable<V>, Serializable {
          * @param num {@inheritDoc}
          */
         @Override
-        public void set(long num) {
+        public void put(long num) {
             this.num = num;
         }
 
@@ -510,7 +510,7 @@ public class Variable<V> implements Valuable<V>, Serializable {
          * @return {@inheritDoc}
          */
         @Override
-        public long get(long num) {
+        public long set(long num) {
             long prev = this.num; this.num = num; return prev;
         }
 
@@ -522,7 +522,7 @@ public class Variable<V> implements Valuable<V>, Serializable {
          * @return {@inheritDoc}
          */
         @Override
-        public boolean set(long state, long num) {
+        public boolean let(long state, long num) {
             if (this.num != state)
                 return false;
             this.num = num; return true;
@@ -585,7 +585,7 @@ public class Variable<V> implements Valuable<V>, Serializable {
          * @param num {@inheritDoc}
          */
         @Override
-        public void set(float num) {
+        public void put(float num) {
             this.num = num;
         }
 
@@ -596,7 +596,7 @@ public class Variable<V> implements Valuable<V>, Serializable {
          * @return {@inheritDoc}
          */
         @Override
-        public float get(float num) {
+        public float set(float num) {
             float prev = this.num; this.num = num; return prev;
         }
 
@@ -608,7 +608,7 @@ public class Variable<V> implements Valuable<V>, Serializable {
          * @return {@inheritDoc}
          */
         @Override
-        public boolean set(float state, float num) {
+        public boolean let(float state, float num) {
             if (java.lang.Float.compare(this.num, state) != 0)
                 return false;
             this.num = num; return true;
@@ -651,7 +651,7 @@ public class Variable<V> implements Valuable<V>, Serializable {
          * @param num {@inheritDoc}
          */
         @Override
-        public void set(double num) {
+        public void put(double num) {
             this.num = num;
         }
 
@@ -662,7 +662,7 @@ public class Variable<V> implements Valuable<V>, Serializable {
          * @return {@inheritDoc}
          */
         @Override
-        public double get(double num) {
+        public double set(double num) {
             double prev = this.num; this.num = num; return prev;
         }
 
@@ -674,7 +674,7 @@ public class Variable<V> implements Valuable<V>, Serializable {
          * @return {@inheritDoc}
          */
         @Override
-        public boolean set(double state, double num) {
+        public boolean let(double state, double num) {
             if (java.lang.Double.compare(this.num, state) != 0)
                 return false;
             this.num = num; return true;

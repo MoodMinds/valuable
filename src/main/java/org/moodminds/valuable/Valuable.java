@@ -17,7 +17,7 @@ public interface Valuable<V> {
      *
      * @param val the given value
      */
-    void set(V val);
+    void put(V val);
 
     /**
      * Get the previous value possible atomically for thread-safe and set the new value.
@@ -25,7 +25,7 @@ public interface Valuable<V> {
      * @param val the new value to set
      * @return the previous value
      */
-    V get(V val);
+    V set(V val);
 
     /**
      * Set the given value possibly atomically for thread-safe if the current value {@code == state}.
@@ -34,7 +34,7 @@ public interface Valuable<V> {
      * @param val the given value
      * @return {@code true} if successfully set to the new value, or {@code false} otherwise
      */
-    boolean set(V state, V val);
+    boolean let(V state, V val);
 
 
     /**
@@ -54,7 +54,7 @@ public interface Valuable<V> {
          *
          * @param flg the given value
          */
-        void set(boolean flg);
+        void put(boolean flg);
 
         /**
          * Get the previous value possible atomically for thread-safe and set the new value.
@@ -62,7 +62,7 @@ public interface Valuable<V> {
          * @param flg the new value to set
          * @return the previous value
          */
-        boolean get(boolean flg);
+        boolean set(boolean flg);
 
         /**
          * Set the given value possibly atomically for thread-safe if the current value {@code == state}.
@@ -71,7 +71,7 @@ public interface Valuable<V> {
          * @param flg the given value
          * @return {@code true} if successfully set to the new value, or {@code false} otherwise
          */
-        boolean set(boolean state, boolean flg);
+        boolean let(boolean state, boolean flg);
     }
 
     /**
@@ -91,7 +91,7 @@ public interface Valuable<V> {
          *
          * @param chr the given value
          */
-        void set(char chr);
+        void put(char chr);
 
         /**
          * Get the previous value possible atomically for thread-safe and set the new value.
@@ -99,7 +99,7 @@ public interface Valuable<V> {
          * @param chr the new value to set
          * @return the previous value
          */
-        char get(char chr);
+        char set(char chr);
 
         /**
          * Set the given value possibly atomically for thread-safe if the current value {@code == state}.
@@ -108,7 +108,7 @@ public interface Valuable<V> {
          * @param chr the given value
          * @return {@code true} if successfully set to the new value, or {@code false} otherwise
          */
-        boolean set(char state, char chr);
+        boolean let(char state, char chr);
     }
 
     /**
@@ -128,7 +128,7 @@ public interface Valuable<V> {
          *
          * @param num the given value
          */
-        void set(byte num);
+        void put(byte num);
 
         /**
          * Get the previous value possible atomically for thread-safe and set the new value.
@@ -136,7 +136,7 @@ public interface Valuable<V> {
          * @param num the new value to set
          * @return the previous value
          */
-        byte get(byte num);
+        byte set(byte num);
 
         /**
          * Set the given value possibly atomically for thread-safe if the current value {@code == state}.
@@ -145,7 +145,7 @@ public interface Valuable<V> {
          * @param num the given value
          * @return {@code true} if successfully set to the new value, or {@code false} otherwise
          */
-        boolean set(byte state, byte num);
+        boolean let(byte state, byte num);
 
         /**
          * Increment value possibly atomically for thread-safe and return.
@@ -179,7 +179,7 @@ public interface Valuable<V> {
          *
          * @param num the given value
          */
-        void set(short num);
+        void put(short num);
 
         /**
          * Get the previous value possible atomically for thread-safe and set the new value.
@@ -187,7 +187,7 @@ public interface Valuable<V> {
          * @param num the new value to set
          * @return the previous value
          */
-        short get(short num);
+        short set(short num);
 
         /**
          * Set the given value possibly atomically for thread-safe if the current value {@code == state}.
@@ -196,7 +196,7 @@ public interface Valuable<V> {
          * @param num the given value
          * @return {@code true} if successfully set to the new value, or {@code false} otherwise
          */
-        boolean set(short state, short num);
+        boolean let(short state, short num);
 
         /**
          * Increment value possibly atomically for thread-safe and return.
@@ -230,7 +230,7 @@ public interface Valuable<V> {
          *
          * @param num the given value
          */
-        void set(int num);
+        void put(int num);
 
         /**
          * Get the previous value possible atomically for thread-safe and set the new value.
@@ -238,7 +238,7 @@ public interface Valuable<V> {
          * @param num the new value to set
          * @return the previous value
          */
-        int get(int num);
+        int set(int num);
 
         /**
          * Set the given value possibly atomically for thread-safe if the current value {@code == state}.
@@ -247,7 +247,7 @@ public interface Valuable<V> {
          * @param num the given value
          * @return {@code true} if successfully set to the new value, or {@code false} otherwise
          */
-        boolean set(int state, int num);
+        boolean let(int state, int num);
 
         /**
          * Increment value possibly atomically for thread-safe and return.
@@ -281,7 +281,7 @@ public interface Valuable<V> {
          *
          * @param num the given value
          */
-        void set(long num);
+        void put(long num);
 
         /**
          * Get the previous value possible atomically for thread-safe and set the new value.
@@ -289,7 +289,7 @@ public interface Valuable<V> {
          * @param num the new value to set
          * @return the previous value
          */
-        long get(long num);
+        long set(long num);
 
         /**
          * Set the given value possibly atomically for thread-safe if the current value {@code == state}.
@@ -298,7 +298,7 @@ public interface Valuable<V> {
          * @param num the given value
          * @return {@code true} if successfully set to the new value, or {@code false} otherwise
          */
-        boolean set(long state, long num);
+        boolean let(long state, long num);
 
         /**
          * Increment value possibly atomically for thread-safe and return.
@@ -332,7 +332,7 @@ public interface Valuable<V> {
          *
          * @param num the given value
          */
-        void set(float num);
+        void put(float num);
 
         /**
          * Get the previous value possible atomically for thread-safe and set the new value.
@@ -340,7 +340,7 @@ public interface Valuable<V> {
          * @param num the new value to set
          * @return the previous value
          */
-        float get(float num);
+        float set(float num);
 
         /**
          * Set the given value possibly atomically for thread-safe if the current value {@code == state}.
@@ -349,7 +349,7 @@ public interface Valuable<V> {
          * @param num the given value
          * @return {@code true} if successfully set to the new value, or {@code false} otherwise
          */
-        boolean set(float state, float num);
+        boolean let(float state, float num);
     }
 
     /**
@@ -369,7 +369,7 @@ public interface Valuable<V> {
          *
          * @param num the given value
          */
-        void set(double num);
+        void put(double num);
 
         /**
          * Get the previous value possible atomically for thread-safe and set the new value.
@@ -377,7 +377,7 @@ public interface Valuable<V> {
          * @param num the new value to set
          * @return the previous value
          */
-        double get(double num);
+        double set(double num);
 
         /**
          * Set the given value possibly atomically for thread-safe if the current value {@code == state}.
@@ -386,6 +386,6 @@ public interface Valuable<V> {
          * @param num the given value
          * @return {@code true} if successfully set to the new value, or {@code false} otherwise
          */
-        boolean set(double state, double num);
+        boolean let(double state, double num);
     }
 }

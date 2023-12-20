@@ -55,27 +55,49 @@ public class Sample {
 
         // operate the Valuables.
 
+        // set values.
+        valuable.put("parallel");
+        booleanValuable.put(false);
+        charValuable.put('1');
+        byteValuable.put((byte) 1);
+        shortValuable.put((short) 1);
+        intValuable.put(1);
+        longValuable.put(1L);
+        floatValuable.put(1.0f);
+        doubleValuable.put(1.0D);
+
+        // get values.
+        String stringCurrent = valuable.get();
+        boolean booleanCurrent = booleanValuable.get();
+        char charCurrent = charValuable.get();
+        byte byteCurrent = byteValuable.get();
+        short shortCurrent = shortValuable.get();
+        int intCurrent = intValuable.get();
+        long longCurrent = longValuable.get();
+        float floatCurrent = floatValuable.get();
+        double doubleCurrent = doubleValuable.get();
+
         // get previous and set possibly atomically (for Volatile).
-        String stringPrevious = valuable.get("parallel");
-        boolean booleanPrevious = booleanValuable.get(false);
-        char charPrevious = charValuable.get('1');
-        byte bytePrevious = byteValuable.get((byte) 1);
-        short shortPrevious = shortValuable.get((short) 1);
-        int intPrevious = intValuable.get(1);
-        long longPrevious = longValuable.get(1L);
-        float floatPrevious = floatValuable.get(1.0f);
-        double doublePrevious = doubleValuable.get(1.0D);
+        String stringPrevious = valuable.set("parallel");
+        boolean booleanPrevious = booleanValuable.set(false);
+        char charPrevious = charValuable.set('1');
+        byte bytePrevious = byteValuable.set((byte) 1);
+        short shortPrevious = shortValuable.set((short) 1);
+        int intPrevious = intValuable.set(1);
+        long longPrevious = longValuable.set(1L);
+        float floatPrevious = floatValuable.set(1.0f);
+        double doublePrevious = doubleValuable.set(1.0D);
 
         // compare and set possibly atomically (for Volatile).
-        boolean valueChanged = valuable.set("sequential", "parallel");
-        boolean booleanChanged = booleanValuable.set(true, false);
-        boolean charChanged = charValuable.set('0', '1');
-        boolean byteChanged = byteValuable.set((byte) 0, (byte) 1);
-        boolean shortChanged = shortValuable.set((short) 0, (short) 1);
-        boolean intChanged = intValuable.set(0, 1);
-        boolean longChanged = longValuable.set(0L, 1L);
-        boolean floatChanged = floatValuable.set(0.0f, 1.0f);
-        boolean doubleChanged = doubleValuable.set(0.0D, 1.0D);
+        boolean valueChanged = valuable.let("sequential", "parallel");
+        boolean booleanChanged = booleanValuable.let(true, false);
+        boolean charChanged = charValuable.let('0', '1');
+        boolean byteChanged = byteValuable.let((byte) 0, (byte) 1);
+        boolean shortChanged = shortValuable.let((short) 0, (short) 1);
+        boolean intChanged = intValuable.let(0, 1);
+        boolean longChanged = longValuable.let(0L, 1L);
+        boolean floatChanged = floatValuable.let(0.0f, 1.0f);
+        boolean doubleChanged = doubleValuable.let(0.0D, 1.0D);
 
         // increment and decrement number Valuables (atomic in Volatile).
         IntSupplier intSupplier = intValuable::incr;
