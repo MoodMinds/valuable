@@ -56,7 +56,7 @@ public class Variable<V> implements Valuable<V>, Serializable {
      */
     @Override
     public V set(V val) {
-        V prev = this.val; this.val = val; return prev;
+        V previous = this.val; this.val = val; return previous;
     }
 
     /**
@@ -121,7 +121,7 @@ public class Variable<V> implements Valuable<V>, Serializable {
          */
         @Override
         public boolean set(boolean flg) {
-            boolean prev = this.flg; this.flg = flg; return prev;
+            boolean previous = this.flg; this.flg = flg; return previous;
         }
 
         /**
@@ -187,7 +187,7 @@ public class Variable<V> implements Valuable<V>, Serializable {
          */
         @Override
         public char set(char chr) {
-            char prev = this.chr; this.chr = chr; return prev;
+            char previous = this.chr; this.chr = chr; return previous;
         }
 
         /**
@@ -253,7 +253,7 @@ public class Variable<V> implements Valuable<V>, Serializable {
          */
         @Override
         public byte set(byte num) {
-            byte prev = this.num; this.num = num; return prev;
+            byte previous = this.num; this.num = num; return previous;
         }
 
         /**
@@ -339,7 +339,7 @@ public class Variable<V> implements Valuable<V>, Serializable {
          */
         @Override
         public short set(short num) {
-            short prev = this.num; this.num = num; return prev;
+            short previous = this.num; this.num = num; return previous;
         }
 
         /**
@@ -425,7 +425,7 @@ public class Variable<V> implements Valuable<V>, Serializable {
          */
         @Override
         public int set(int num) {
-            int prev = this.num; this.num = num; return prev;
+            int previous = this.num; this.num = num; return previous;
         }
 
         /**
@@ -511,7 +511,7 @@ public class Variable<V> implements Valuable<V>, Serializable {
          */
         @Override
         public long set(long num) {
-            long prev = this.num; this.num = num; return prev;
+            long previous = this.num; this.num = num; return previous;
         }
 
         /**
@@ -597,7 +597,7 @@ public class Variable<V> implements Valuable<V>, Serializable {
          */
         @Override
         public float set(float num) {
-            float prev = this.num; this.num = num; return prev;
+            float previous = this.num; this.num = num; return previous;
         }
 
         /**
@@ -663,7 +663,7 @@ public class Variable<V> implements Valuable<V>, Serializable {
          */
         @Override
         public double set(double num) {
-            double prev = this.num; this.num = num; return prev;
+            double previous = this.num; this.num = num; return previous;
         }
 
         /**
